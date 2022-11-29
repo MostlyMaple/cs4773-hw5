@@ -4,18 +4,18 @@ import application.elevator.states.*;
 
 public class Elevator {
     
-    State closedDoorState;
-    State idleState;
-    State buttonSelectedState;
-    State movingUpState;
-    State movingDownState;
-    State arrivedState;
-    State state;
+    private State closedDoorState;
+    private State idleState;
+    private State buttonSelectedState;
+    private State movingUpState;
+    private State movingDownState;
+    private State arrivedState;
+    private State state;
 
-    int currentFloor = 1;
-    int selectedFloor;
+    private int currentFloor = 1;
+    private int selectedFloor;
 
-    boolean isDoorClosed = false;
+    private boolean isDoorClosed = false;
 
     public Elevator() {
         this.idleState = new IdleState(this);
