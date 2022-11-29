@@ -1,10 +1,12 @@
-package application.elevator;
+package application.elevator.states;
 
-public class MovingUpState implements State{
+import application.elevator.Elevator;
+
+public class MovingDownState implements State{
 
     Elevator elevator;
 
-    public MovingUpState(Elevator elevator) {
+    public MovingDownState(Elevator elevator) {
         this.elevator = elevator;
     }
 
@@ -29,9 +31,8 @@ public class MovingUpState implements State{
     }
 
     public void arrive(int floorNumber) {
-        elevator.setState(elevator.arrivedState);
+        elevator.setState(elevator.getArrivedState());
         elevator.setCurrentFloor(floorNumber);
         System.out.println("*ding* The elevator arrives at Floor " + floorNumber);
     }
-
 }

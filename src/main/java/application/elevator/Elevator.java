@@ -1,5 +1,7 @@
 package application.elevator;
 
+import application.elevator.states.*;
+
 public class Elevator {
     
     State closedDoorState;
@@ -12,7 +14,7 @@ public class Elevator {
 
     int currentFloor = 1;
     int selectedFloor;
-    
+
     boolean isDoorClosed = false;
 
     public Elevator() {
@@ -26,7 +28,35 @@ public class Elevator {
         this.state = this.idleState;
     }
 
-    public void setDoorClosed(boolean doorStatus) {
+    public State getIdleState() {
+        return this.idleState;
+    }
+
+    public State getMovingUpState() {
+        return this.movingUpState;
+    }
+
+    public State getMovingDownState() {
+        return this.movingDownState;
+    }
+
+    public State getButtonSelectedState() {
+        return this.buttonSelectedState;
+    }
+
+    public State getArrivedState() {
+        return this.arrivedState;
+    }
+
+    public State getClosedDoorState() {
+        return this.closedDoorState;
+    }
+
+    public boolean getIsDoorClosed() {
+        return this.isDoorClosed;
+    }
+
+    public void setIsDoorClosed(boolean doorStatus) {
         this.isDoorClosed = doorStatus;
     }
 

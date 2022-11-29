@@ -1,4 +1,6 @@
-package application.elevator;
+package application.elevator.states;
+
+import application.elevator.Elevator;
 
 public class IdleState implements State {
     Elevator elevator;
@@ -15,7 +17,7 @@ public class IdleState implements State {
     }
 
     public void buttonPress(int floorNumber) {
-        elevator.setState(elevator.buttonSelectedState);
+        elevator.setState(elevator.getButtonSelectedState());
         System.out.println(floorNumber + " pressed");
     }
 

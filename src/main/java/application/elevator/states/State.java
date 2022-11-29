@@ -1,4 +1,4 @@
-package application.elevator;
+package application.elevator.states;
 
 public interface State {
 

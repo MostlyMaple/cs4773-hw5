@@ -1,4 +1,7 @@
-package application.elevator;
+package application.elevator.states;
+
+import application.elevator.Elevator;
+
 
 public class ArrivedState implements State {
         
@@ -9,9 +12,9 @@ public class ArrivedState implements State {
     }
 
     public void openDoor() {
-        elevator.setState(elevator.idleState);
-        if (elevator.isDoorClosed) {
-            elevator.setDoorClosed(false);
+        elevator.setState(elevator.getIdleState());
+        if (elevator.getIsDoorClosed()) {
+            elevator.setIsDoorClosed(false);
             System.out.println("Doors are open");
         }
     }

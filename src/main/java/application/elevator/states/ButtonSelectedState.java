@@ -1,4 +1,6 @@
-package application.elevator;
+package application.elevator.states;
+
+import application.elevator.Elevator;
 
 public class ButtonSelectedState implements State {
     
@@ -13,9 +15,9 @@ public class ButtonSelectedState implements State {
     }
 
     public void closeDoor() {
-        elevator.setState(elevator.closedDoorState);
-        if (!elevator.isDoorClosed) {
-            elevator.setDoorClosed(true);
+        elevator.setState(elevator.getClosedDoorState());
+        if (!elevator.getIsDoorClosed()) {
+            elevator.setIsDoorClosed(true);
             System.out.println("Doors are closed");
         }
     }
